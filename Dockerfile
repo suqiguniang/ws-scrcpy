@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:16
 MAINTAINER Scavin <scavin@appinn.com>
 
 ENV LANG C.UTF-8
