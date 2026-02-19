@@ -5,9 +5,9 @@ ENV LANG C.UTF-8
 WORKDIR /ws-scrcpy
 
 # 安装系统依赖（注意包名改为 adb）
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends adb && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
+RUN apt-get install -y --no-install-recommends adb
+RUN rm -rf /var/lib/apt/lists/*
 
 # 全局安装 node-gyp（如果需要）
 RUN npm install -g node-gyp
