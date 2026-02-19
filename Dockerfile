@@ -1,6 +1,10 @@
 FROM node:16
 LABEL maintainer="Scavin <scavin@appinn.com>"
 
+# 替换为阿里云源（可选）
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list && \
+    sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+    
 ENV LANG C.UTF-8
 WORKDIR /ws-scrcpy
 
